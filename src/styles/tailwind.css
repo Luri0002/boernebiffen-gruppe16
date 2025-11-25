@@ -41,7 +41,7 @@
   --color-orange-500: #f96640;
 
   /*Typografi */
-  --font-display: "Merriweather", serif;
+  --font-display: "Merriweather Sans", sans-serif;
 }
 
 @layer base {
