@@ -9,12 +9,36 @@
   /* Her tilføjes theme variable // tokens */
 
   /*Farver */
-  --color-primary-400: #00e4f5;
-  --color-primary-500: #006269;
-  --color-primary-600: #006d75;
-  --color-secondary-400: #f5e400;
-  --color-secondary-500: #f5a600;
-  --color-secondary-600: #f57a00;
+
+  /* lightyellow */
+  --color-lightyellow-500: #f9f7ee;
+
+  /* pink */
+  --color-pink-100: #fae6ec;
+  --color-pink-300: #f4b1c7;
+  --color-pink-600: #dd3a84;
+
+  /* lightblue */
+  --color-lightblue-50: #edf4ff;
+  --color-lightblue-200: #b2d5ff;
+  --color-lightblue-700: #01588a;
+
+  /* forestgreen */
+  --color-forestgreen-400: #9bad00;
+
+  /* yellow */
+  --color-yellow-400: #ffb953;
+
+  /* green */
+  --color-green-400: #0aad7e;
+
+  /* lilla */
+  --color-lilla-200: #b7beed;
+  --color-lilla-500: #4662c7;
+  --color-lilla-700: #293a7d;
+
+  /* orange */
+  --color-orange-500: #f96640;
 
   /*Typografi */
   --font-display: "Merriweather", serif;
