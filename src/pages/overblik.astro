@@ -1,10 +1,125 @@
 ---
 import CardList from "../components/CardList.astro";
+import CardListGreen from "../components/CardListGreen.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+import Heading from "../components/Heading.astro";
+import { Image } from "astro:assets";
+import dyr from "../assets/images/dyr.webp";
+import fra from "../assets/images/fra.webp";
+import læring from "../assets/images/læring.webp";
+import serier from "../assets/images/serier.webp";
+import tegnefilm from "../assets/images/tegnefilm.webp";
+import one from "../assets/images/one.webp";
+import two from "../assets/images/two.webp";
+import tree from "../assets/images/tree.webp";
+import four from "../assets/images/four.webp";
+import five from "../assets/images/five.webp";
+import nyheder from "../assets/images/nyheder.webp";
+import Text from "../components/Text.astro";
 ---
 
 <MainLayout title="Overblik">
-  <section>
+  <section class="p-10 mt-10">
+    <div class="carousel w-full">
+      <div id="slide1" class="carousel-item relative w-full">
+        <Image class="w-full" src={nyheder} alt="Nyheder" />
+        <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+          <a href="#slide4" class="btn btn-circle">❮</a>
+          <a href="#slide2" class="btn btn-circle">❯</a>
+        </div>
+      </div>
+      <div id="slide2" class="carousel-item relative w-full">
+        <Image class="w-full" src={nyheder} alt="Nyheder" />
+        <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+          <a href="#slide1" class="btn btn-circle">❮</a>
+          <a href="#slide3" class="btn btn-circle">❯</a>
+        </div>
+      </div>
+      <div id="slide3" class="carousel-item relative w-full">
+        <Image class="w-full" src={nyheder} alt="Nyheder" />
+        <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+          <a href="#slide2" class="btn btn-circle">❮</a>
+          <a href="#slide4" class="btn btn-circle">❯</a>
+        </div>
+      </div>
+      <div id="slide4" class="carousel-item relative w-full">
+        <Image class="w-full" src={nyheder} alt="Nyheder" />
+        <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+          <a href="#slide3" class="btn btn-circle">❮</a>
+          <a href="#slide1" class="btn btn-circle">❯</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-pink-100 p-10">
+    <div class="carousel rounded-box h-48 gap-10">
+      <div class="carousel-item h-full w-auto flex items-center justify-center overflow-hidden hover:scale-105 transition-transform duration-300">
+        <Image class="h-full w-auto object-cover" src={one} alt="Tegneseriefigur" />
+      </div>
+      <div class="carousel-item h-full w-auto flex items-center justify-center overflow-hidden hover:scale-105 transition-transform duration-300">
+        <Image class="h-full w-auto object-cover" src={two} alt="Tegneseriefigur" />
+      </div>
+      <div class="carousel-item h-full w-auto flex items-center justify-center overflow-hidden hover:scale-105 transition-transform duration-300">
+        <Image class="h-full w-auto object-cover" src={tree} alt="Tegneseriefigur" />
+      </div>
+      <div class="carousel-item h-full w-auto flex items-center justify-center overflow-hidden hover:scale-105 transition-transform duration-300">
+        <Image class="h-full w-auto object-cover" src={four} alt="Tegneseriefigur" />
+      </div>
+      <div class="carousel-item h-full w-auto flex items-center justify-center overflow-hidden hover:scale-105 transition-transform duration-300">
+        <Image class="h-full w-auto object-cover" src={five} alt="Tegneseriefigur" />
+      </div>
+      <div class="carousel-item h-full w-auto flex items-center justify-center overflow-hidden hover:scale-105 transition-transform duration-300">
+        <Image class="h-full w-auto object-cover" src={one} alt="Tegneseriefigur" />
+      </div>
+      <div class="carousel-item h-full w-auto flex items-center justify-center overflow-hidden hover:scale-105 transition-transform duration-300">
+        <Image class="h-full w-auto object-cover" src={two} alt="Tegneseriefigur" />
+      </div>
+      <div class="carousel-item h-full w-auto flex items-center justify-center overflow-hidden hover:scale-105 transition-transform duration-300">
+        <Image class="h-full w-auto object-cover" src={tree} alt="Tegneseriefigur" />
+      </div>
+      <div class="carousel-item h-full w-auto flex items-center justify-center overflow-hidden hover:scale-105 transition-transform duration-300">
+        <Image class="h-full w-auto object-cover" src={four} alt="Tegneseriefigur" />
+      </div>
+      <div class="carousel-item h-full w-auto flex items-center justify-center overflow-hidden hover:scale-105 transition-transform duration-300">
+        <Image class="h-full w-auto object-cover" src={five} alt="Tegneseriefigur" />
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-lightblue-700 p-10 mt-10">
+    <Heading stylingclasses="text-lightyellow-500 pb-10" htmlheading="h3" size="medium">Fortsæt med at se</Heading>
     <CardList />
+  </section>
+
+  <section class="bg-forestgreen-400 p-10 mt-10">
+    <Heading stylingclasses="text-lightyellow-500 pb-10" htmlheading="h3" size="medium">Anbefalet til dig</Heading>
+    <CardListGreen />
+  </section>
+
+  <section class="bg-yellow-400 p-10 mt-10 mb-20">
+    <Heading stylingclasses="text-lightyellow-500 pb-10" htmlheading="h3" size="medium">Kategorier</Heading>
+    <div class="grid gap-10 grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+      <div class="flex flex-col items-center">
+        <Image src={dyr} alt="Giraf tegning" />
+        <Text stylingclasses="text-lightyellow-500" teksttype="brødtekst">Dyr</Text>
+      </div>
+      <div class="flex flex-col items-center">
+        <Image src={læring} alt="Læring symbol" />
+        <Text stylingclasses="text-lightyellow-500" teksttype="brødtekst">Læring</Text>
+      </div>
+      <div class="flex flex-col items-center">
+        <Image src={tegnefilm} alt="Tegnefilm symbol" />
+        <Text stylingclasses="text-lightyellow-500" teksttype="brødtekst">Tegnefilm</Text>
+      </div>
+      <div class="flex flex-col items-center">
+        <Image src={serier} alt="Serier symbol" />
+        <Text stylingclasses="text-lightyellow-500" teksttype="brødtekst">Serier</Text>
+      </div>
+      <div class="flex flex-col items-center">
+        <Image src={fra} alt="Fra A til Å symbol" />
+        <Text stylingclasses="text-lightyellow-500" teksttype="brødtekst">Fra A-Å</Text>
+      </div>
+    </div>
   </section>
 </MainLayout>

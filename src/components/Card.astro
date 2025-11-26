@@ -1,5 +1,5 @@
 ---
-const { src, cardTitle, cardInfo } = Astro.props;
+const { bgColor, src, cardTitle, cardInfo } = Astro.props;
 import Text from "../components/Text.astro";
 import Heading from "../components/Heading.astro";
 import Button from "../components/Button.astro";
@@ -7,7 +7,7 @@ import { Image } from "astro:assets";
 ---
 
 <section>
-  <div class="card bg-lightblue-600 w-96 shadow-sm">
+  <div class={`card ${bgColor} w-96 shadow-sm`}>
     <figure>
       <Image src={src} alt="Kortfilm" />
     </figure>
