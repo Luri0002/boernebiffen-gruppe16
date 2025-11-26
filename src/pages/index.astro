@@ -2,24 +2,36 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Heading from "../components/Heading.astro";
 import Button from "../components/Button.astro";
+import Text from "../components/Text.astro";
 ---
+
 <MainLayout title="Homepage">
-	<section class="container mx-auto p-6 grid grid-cols-2 bg-[url('/hero_clouds.svg')] bg-[length:25%] bg-no-repeat bg-top-left">
-	
-    <div> 
-		<Heading htmlheading="h1" size="large">DET ER GRATIS AT LOGGE IND!</Heading>
-		<!-- når man ikke definere værdierne, får heading de default værdier som du finder inde i headin komponent -->
-		<Heading stylingclasses="text-lilla-500 mt-5 mb-5 lg:mt-8 lg:mb:8">Børnebiffen - et trygt, kurateret filmunivers med håndplukkede kortfilm til de mindste!</Heading>
-        <Button variant="secondary">LOG IND</Button>
-	</div>
-	
-	<div class="-mr-6 lg:-mr-34">
-	<img src="/hero_imgfinal.svg" alt="illustration med skyer og tegnefil karakter" class="w-full h-auto mt-40 lg:mt-25">
-	</div>
-    
-    </section>
+  <section class="pl-20 pt-5 grid grid-cols-2 bg-[url('/hero_clouds.svg')] bg-[length:25%] bg-no-repeat bg-top-left">
+    <div>
+      <Heading htmlheading="h1" size="large">DET ER GRATIS AT LOGGE IND!</Heading>
+      <!-- når man ikke definere værdierne, får heading de default værdier som du finder inde i headin komponent -->
+      <Heading stylingclasses="text-lilla-500 mt-1 mb-5 lg:mt-5 lg:mb:8">Børnebiffen - et trygt, kurateret filmunivers med håndplukkede kortfilm til de mindste!</Heading>
+      <Button variant="secondary">LOG IND</Button>
+    </div>
 
-	<!-- <Heading htmlheading="h3" size="medium">Hent vores app!</Heading>
-    <Text teksttype="brødtekst">Til tablet og mobil - så kan børnene selv være med.</Text> -->
+    <div class="-mr-6 lg:-mr-34">
+      <img src="/hero_imgfinal.svg" alt="illustration med skyer og tegnefil karakter" class="w-full h-auto mt-40 lg:mt-25" />
+    </div>
+  </section>
 
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <!-- Billede (Mobiler-og-skyer) -->
+    <div class="order-3 md:order-1">
+      <img class="w-full h-auto" src="/Mobiler-og-skyer.svg" alt="billede af telefon" />
+    </div>
+
+    <!-- Heading + tekst + QR-->
+    <div class="flex flex-col justify-center items-center md:items-start text-center md:text-left order-1 md:order-2">
+      <Heading htmlheading="h3" size="large">Hent vores app!</Heading>
+
+      <Text teksttype="brødtekst"> Til tablet og mobil - så kan børnene selv være med. </Text>
+
+      <img class="w-full h-auto mx-auto md:mx-0 mt-4 pl-4 md:pl-0" src="/Qr-download.svg" alt="billede af qr kode" />
+    </div>
+  </section>
 </MainLayout>
