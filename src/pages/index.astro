@@ -1,20 +1,25 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Heading from "../components/Heading.astro";
-import Text from "../components/Text.astro";
 import Button from "../components/Button.astro";
 ---
 <MainLayout title="Homepage">
-	<main class="container mx-auto p-4">
-
-		<Heading htmlheading="h1" size="large" stylingclasses="text-orange-500">DET ER GRATIS AT LOGGE IND!</Heading>
+	<section class="container mx-auto p-6 grid grid-cols-2 bg-[url('/hero_clouds.svg')] bg-[length:25%] bg-no-repeat bg-top-left">
+	
+    <div> 
+		<Heading htmlheading="h1" size="large">DET ER GRATIS AT LOGGE IND!</Heading>
 		<!-- når man ikke definere værdierne, får heading de default værdier som du finder inde i headin komponent -->
-		<Heading>Børnebiffen - et trygt, kurateret filmunivers med håndplukkede kortfilm til de mindste!</Heading>
+		<Heading stylingclasses="text-lilla-500 mt-5 mb-5 lg:mt-8 lg:mb:8">Børnebiffen - et trygt, kurateret filmunivers med håndplukkede kortfilm til de mindste!</Heading>
+        <Button variant="secondary">LOG IND</Button>
+	</div>
+	
+	<div class="-mr-6 lg:-mr-34">
+	<img src="/hero_imgfinal.svg" alt="illustration med skyer og tegnefil karakter" class="w-full h-auto mt-40 lg:mt-25">
+	</div>
+    
+    </section>
 
-		<Heading htmlheading="h3" size="medium">Hent vores app!</Heading>
+	<!-- <Heading htmlheading="h3" size="medium">Hent vores app!</Heading>
+    <Text teksttype="brødtekst">Til tablet og mobil - så kan børnene selv være med.</Text> -->
 
-        <Text teksttype="brødtekst">Til tablet og mobil - så kan børnene selv være med.</Text>
-<Button variant="secondary">LOG IND</Button>
-            
-	</main>
 </MainLayout>

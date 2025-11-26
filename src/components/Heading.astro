@@ -1,11 +1,11 @@
 ---
 // Henter parametrene fra Astro.props - default værdier er angivet
-const { htmlheading="h2", size="small", font="display", stylingclasses=""} = Astro.props; 
+const { htmlheading="h2", size="small", font="display", stylingclasses="text-orange-500"} = Astro.props; 
 const Htmlheading = htmlheading;
  
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskellige størrelser.
 const sizeClasses = {
-"large": "text-3xl lg:text-6xl",
+"large": "text-4xl lg:text-6xl",
 "medium": "text-2xl lg:text-5xl",
 "small": "text-xl lg:text-3xl",
 };
