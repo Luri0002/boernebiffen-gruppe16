@@ -7,15 +7,15 @@ import { Image } from "astro:assets";
 ---
 
 <section>
-  <div class="card bg-sky-700 w-96 shadow-sm">
+  <div class="card bg-lightblue-600 w-96 shadow-sm">
     <figure>
       <Image src={src} alt="Kortfilm" />
     </figure>
     <div class="card-body">
-      <Heading class="card-title" htmlheading="h4" size="xsmall">{cardTitle}</Heading>
+      <Heading class="card-title" stylingclasses="text-lightyellow-500" htmlheading="h4" size="xsmall">{cardTitle}</Heading>
       <div class="card-actions justify-between items-center">
-        <button class="btn btn-primary">Start</button>
-        <Text teksttype="brødtekst">{cardInfo}</Text>
+        <Text stylingclasses="text-lightyellow-500" teksttype="brødtekst">{cardInfo}</Text>
+        <Button class="btn btn-primary">Start</Button>
       </div>
     </div>
   </div>
