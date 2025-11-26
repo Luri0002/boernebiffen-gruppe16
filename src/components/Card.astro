@@ -1,0 +1,22 @@
+---
+const { src, cardTitle, cardInfo } = Astro.props;
+import Text from "../components/Text.astro";
+import Heading from "../components/Heading.astro";
+import Button from "../components/Button.astro";
+import { Image } from "astro:assets";
+---
+
+<section>
+  <div class="card bg-sky-700 w-96 shadow-sm">
+    <figure>
+      <Image src={src} alt="Kortfilm" />
+    </figure>
+    <div class="card-body">
+      <Heading class="card-title" htmlheading="h4" size="xsmall">{cardTitle}</Heading>
+      <div class="card-actions justify-between items-center">
+        <button class="btn btn-primary">Start</button>
+        <Text teksttype="brødtekst">{cardInfo}</Text>
+      </div>
+    </div>
+  </div>
+</section>
