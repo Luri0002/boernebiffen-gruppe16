@@ -5,6 +5,8 @@
 @import "tailwindcss-animated";
 @import "tailwindcss-intersect";
 
+@plugin "daisyui";
+
 @theme {
   /* Her tilføjes theme variable // tokens */
 
@@ -21,6 +23,7 @@
   /* lightblue */
   --color-lightblue-50: #edf4ff;
   --color-lightblue-200: #b2d5ff;
+  --color-lightblue-600: #047abb;
   --color-lightblue-700: #01588a;
 
   /* forestgreen */
