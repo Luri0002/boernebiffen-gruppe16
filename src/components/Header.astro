@@ -3,21 +3,20 @@ const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/"
 import Button from "../components/Button.astro";
 ---
+
 <header class="bg-lightblue-200 mb-8 lg:mb-10 relative h-40 md:h-45 lg:h-70">
-     <!-- skyer svg -->
-    <img src="/clouds.svg" alt="grafisk form med skyer" class="absolute bottom-0 left-0">
+  <!-- skyer svg -->
+  <img src="/clouds.svg" alt="grafisk form med skyer" class="absolute bottom-0 left-0" />
 
-    <div class="container mx-auto p-8 flex flex-row justify-between items-center">
-        
-        <!-- logo -->
-        <div id="logo" class="">
-            <a href="#">
-                <img class="w-50 h-auto lg:w-75" src="/logo.svg" alt="børnebiffen logo">
-            </a>
-        </div>
-
-        <!-- log ind knap -->
-        <Button>LOG IND</Button>
+  <div class="container mx-auto p-8 flex flex-row justify-between items-center">
+    <!-- logo -->
+    <div id="logo" class="">
+      <a href="#">
+        <img class="w-50 h-auto lg:w-75" src="/logo.svg" alt="børnebiffen logo" />
+      </a>
     </div>
-        
+
+    <!-- log ind knap -->
+    <Button>LOG IND</Button>
+  </div>
 </header>

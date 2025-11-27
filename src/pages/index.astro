@@ -6,9 +6,9 @@ import Text from "../components/Text.astro";
 ---
 
 <MainLayout title="Homepage">
-  <section class="pl-30 pt-5 grid grid-cols-2 bg-[url('/hero_clouds.svg')] bg-[length:25%] bg-no-repeat bg-top-left">
-    <div>
-      <Heading htmlheading="h1" size="large">DET ER GRATIS AT LOGGE IND!</Heading>
+  <section class="grid md:grid-cols-2 bg-[url('/hero_clouds.svg')] bg-[length:50%] md:bg-[length:25%] bg-no-repeat bg-top-left">
+    <div class="p-8 lg:pl-30">
+      <Heading htmlheading="h1" size="large">DET ER GRATIS<br /> AT LOGGE IND!</Heading>
       <!-- når man ikke definere værdierne, får heading de default værdier som du finder inde i headin komponent -->
       <Heading stylingclasses="text-lilla-500 mt-1 mb-5 lg:mt-5 lg:mb:8">Børnebiffen - et trygt, kurateret filmunivers med håndplukkede kortfilm til de mindste!</Heading>
       <Button variant="secondary">LOG IND</Button>
