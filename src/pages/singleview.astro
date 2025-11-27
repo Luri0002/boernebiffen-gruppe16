@@ -2,49 +2,45 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
+import CardList from "../components/CardList.astro";
 ---
 
 <MainLayout title="Single view">
-<!-- hele sektionen -->
-<section class="container mx-auto p-4 grid lg:grid-cols-2">
+  <!-- hele sektionen -->
+  <section class="container mx-auto p-4 grid lg:grid-cols-2">
+    <!-- div med pilen og text -->
+    <div>
+      <!-- tilbage pilen -->
+      <img src="/tilbage_pil.svg" alt="pilen det fører tilbage til forrige side" class="w-20 h-auto mb-6 cursor-pointer" onclick="history.back()" />
 
- <!-- div med pilen og text -->
- <div> 
+      <!-- h3 -->
+      <Heading htmlheading="h3" size="medium" stylingclasses="text-orange-500">Rita og Krokodille: Nat</Heading>
 
-  <!-- tilbage pilen -->
-  <img src="/tilbage_pil.svg" alt="pilen det fører tilbage til forrige side" class="w-20 h-auto mb-6 cursor-pointer" onclick="history.back()">
+      <!-- div med tid tekst + uhr svg-->
+      <div class="flex flex-row gap-5 mt-2 lg:mt-6">
+        <Text teksttype="brødtekst">5 min</Text>
+        <img src="/uhr.svg" alt="et ur ikon" class="w-5 h-auto lg:w-8 inline-block" />
+      </div>
 
-  <!-- h3 -->
-  <Heading htmlheading="h3" size="medium" stylingclasses="text-orange-500">Rita og Krokodille: Nat</Heading>
-
-  <!-- div med tid tekst + uhr svg-->
-   <div class="flex flex-row gap-5 mt-2 lg:mt-6">
-    <Text teksttype="brødtekst">5 min</Text>
-    <img src="/uhr.svg" alt="et ur ikon" class="w-5 h-auto lg:w-8 inline-block">
-   </div>
-
-   <!-- div med mere info tekst + pil svg-->
-   <div class="flex flex-row gap-5">
-    <Text teksttype="brødtekst">Mere info</Text>
-    <img src="/ned_pil.svg" alt="et pil ikon" class="w-5 h-auto lg:w-8 inline-block">
-   </div>
-
- </div>
-
- <!-- div med billede og skyrne i baggrund -->
-    <div class="relative bg-[url('/singleview_clouds.svg')] h-110 md:lg-120 lg:h-130 bg-cover bg-center">
-    <!-- Selve billedet -->
-    <img src="/rita.webp" 
-         alt="rita og krokodille billede" 
-         class="w-full lg:w-full h-auto py-15 z-10">
-
-    <!-- SVG i midten -->
-    <img src="/play_knappen.svg" 
-         alt="play" 
-         class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-25 h-25 lg:w-35 lg:h-35 z-20 cursor-pointer">
+      <!-- div med mere info tekst + pil svg-->
+      <div class="flex flex-row gap-5">
+        <Text teksttype="brødtekst">Mere info</Text>
+        <img src="/ned_pil.svg" alt="et pil ikon" class="w-5 h-auto lg:w-8 inline-block" />
+      </div>
     </div>
 
+    <!-- div med billede og skyrne i baggrund -->
+    <div class="relative bg-[url('/singleview_clouds.svg')] h-110 md:lg-120 lg:h-130 bg-cover bg-center">
+      <!-- Selve billedet -->
+      <img src="/rita.webp" alt="rita og krokodille billede" class="w-full lg:w-full h-auto py-15 z-10" />
 
-</section>
+      <!-- SVG i midten -->
+      <img src="/play_knappen.svg" alt="play" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-25 h-25 lg:w-35 lg:h-35 z-20 cursor-pointer" />
+    </div>
+  </section>
 
+  <section class="bg-lightblue-700 p-10 mt-10 mb-20">
+    <Heading stylingclasses="text-lightyellow-500 pb-10" htmlheading="h3" size="medium">Mere fra samme serie:</Heading>
+    <CardList />
+  </section>
 </MainLayout>
