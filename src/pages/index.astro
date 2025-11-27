@@ -6,12 +6,12 @@ import Text from "../components/Text.astro";
 ---
 
 <MainLayout title="Homepage">
-  <section class="pl-20 pt-5 grid grid-cols-2 bg-[url('/hero_clouds.svg')] bg-[length:25%] bg-no-repeat bg-top-left">
-    <div>
-      <Heading htmlheading="h1" size="large">DET ER GRATIS AT LOGGE IND!</Heading>
+  <section class="grid md:grid-cols-2 bg-[url('/hero_clouds.svg')] bg-[length:50%] md:bg-[length:25%] bg-no-repeat bg-top-left">
+    <div class="p-8 lg:pl-30">
+      <Heading htmlheading="h1" size="large">DET ER GRATIS<br /> AT LOGGE IND!</Heading>
       <!-- når man ikke definere værdierne, får heading de default værdier som du finder inde i headin komponent -->
       <Heading stylingclasses="text-lilla-500 mt-1 mb-5 lg:mt-5 lg:mb:8">Børnebiffen - et trygt, kurateret filmunivers med håndplukkede kortfilm til de mindste!</Heading>
-      <a href="/overblik/"><Button variant="secondary">LOG IND</Button></a>
+      <Button variant="secondary">LOG IND</Button>
     </div>
 
     <div class="-mr-6 lg:-mr-34">
@@ -19,75 +19,19 @@ import Text from "../components/Text.astro";
     </div>
   </section>
 
-  <section>
-    <div class="carousel rounded-box">
-      <div class="carousel-item">
-        <img src="https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp" alt="Burger" />
-      </div>
-      <div class="carousel-item">
-        <img src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp" alt="Burger" />
-      </div>
-      <div class="carousel-item">
-        <img src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp" alt="Burger" />
-      </div>
-      <div class="carousel-item">
-        <img src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp" alt="Burger" />
-      </div>
-      <div class="carousel-item">
-        <img src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp" alt="Burger" />
-      </div>
-      <div class="carousel-item">
-        <img src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp" alt="Burger" />
-      </div>
-      <div class="carousel-item">
-        <img src="https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp" alt="Burger" />
-      </div>
-      <div class="carousel-item">
-        <img src="https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp" alt="Burger" />
-      </div>
-      <div class="carousel-item">
-        <img src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp" alt="Burger" />
-      </div>
-      <div class="carousel-item">
-        <img src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp" alt="Burger" />
-      </div>
-    </div>
-    <div class="">
-      <!-- previous next buttons -->
-      <div class="flex justify-center w-full py-2 gap-2">
-        <button class="btn btn-circle btn-sm">❮</button>
-        <button class="btn btn-circle btn-sm">❯</button>
-      </div>
-      <!-- on previous next: move one carousel item forwards -->
-      <script>
-        const carousel = document.querySelector(".carousel");
-        const btnPrev = document.querySelector(".btn-circle.btn-sm:first-child");
-        const btnNext = document.querySelector(".btn-circle.btn-sm:last-child");
-
-        btnPrev.addEventListener("click", () => {
-          carousel.scrollBy({ left: -carousel.offsetWidth, behavior: "smooth" });
-        });
-
-        btnNext.addEventListener("click", () => {
-          carousel.scrollBy({ left: carousel.offsetWidth, behavior: "smooth" });
-        });
-      </script>
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <!-- Billede (Mobiler-og-skyer) -->
+    <div class="order-3 md:order-1">
+      <img class="w-full h-auto" src="/Mobiler-og-skyer.svg" alt="billede af telefon" />
     </div>
 
-    <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <!-- Billede (Mobiler-og-skyer) -->
-      <div class="order-3 md:order-1">
-        <img class="w-full h-auto" src="/Mobiler-og-skyer.svg" alt="billede af telefon" />
-      </div>
+    <!-- Heading + tekst + QR-->
+    <div class="flex flex-col justify-center items-center md:items-start text-center md:text-left order-1 md:order-2">
+      <Heading htmlheading="h3" size="large">Hent vores app!</Heading>
 
-      <!-- Heading + tekst + QR-->
-      <div class="flex flex-col justify-center items-center md:items-start text-center md:text-left order-1 md:order-2">
-        <Heading htmlheading="h3" size="large">Hent vores app!</Heading>
+      <Text teksttype="brødtekst"> Til tablet og mobil - så kan børnene selv være med. </Text>
 
-        <Text teksttype="brødtekst"> Til tablet og mobil - så kan børnene selv være med. </Text>
-
-        <img class="w-full h-auto mx-auto md:mx-0 mt-4 pl-4 md:pl-0" src="/Qr-download.svg" alt="billede af qr kode" />
-      </div>
-    </section>
+      <img class="w-full h-auto mx-auto md:mx-0 mt-4 pl-4 md:pl-0" src="/Qr-download.svg" alt="billede af qr kode" />
+    </div>
   </section>
 </MainLayout>
